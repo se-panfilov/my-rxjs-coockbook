@@ -1,13 +1,11 @@
-const {of, Subject, forkJoin, zip, merge} = require('rxjs')
-const {delay, takeUntil, flatMap, map, switchMap, every, take} = require('rxjs/operators')
+const {of, Subject, forkJoin, zip, merge, combineLatest} = require('rxjs')
+const {delay, takeUntil, flatMap, map, switchMap, every, take, tap, reduce} = require('rxjs/operators')
 
 // Case:
 // Get two observables and get final value based on ANY value
 
-forkJoin(of(1), of(1), of(1), of(1), of(1), of(1), of(1), of(1))
+combineLatest(of(true), of(false), of(true))
   .pipe(
-    map(arr => arr.some(v => v === 2)) // true if ANY values is 2
+    map(arr => arr.some(v => v === false)) // true if ANY values is false
   )
-  .subscribe(v =>
-    console.log(v)
-  )
+  .subscribe(console.log)
