@@ -16,7 +16,7 @@ function waitWhiteViewChildIsReady(parent, child, maxWaitTime = 3000, refreshRat
     .pipe(
       takeWhile(() => !parent[child]),
       filter(x => x === undefined),
-      takeUntil(timer(maxWaitTime)),
+      takeUntil(timer(maxWaitTime)),// TODO (S.Panfilov) takeUntil might produce memory leak here, better put it to the very end
       endWith(parent[child]),
       flatMap(v => {
         if (!parent[child]) throw new Error(`Children "${child}" is never ready`);
