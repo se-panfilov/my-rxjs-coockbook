@@ -1,12 +1,12 @@
 const {of, Subject, forkJoin, zip, merge, throwError} = require('rxjs')
 const {delay, takeUntil, flatMap, map, switchMap, every, take, tap, catchError} = require('rxjs/operators')
 
-function mainEmiter() {
+function mainEmitter() {
   return throwError('Main Error')
 }
 
 
-mainEmiter()
+mainEmitter()
   .pipe(
     catchError(errorResponse => {
       console.log('catch')
