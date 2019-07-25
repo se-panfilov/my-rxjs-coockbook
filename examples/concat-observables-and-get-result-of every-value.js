@@ -17,3 +17,13 @@ from([1, 2, 3, 4, 5])
     every(v => v === 1)
   )
   .subscribe(console.log)
+
+
+// Case 3:
+// Get the  result based on array
+const arr2 = ['a', 'd'];
+of(['a', 'b', 'c'])
+  .pipe(
+    map(list => list.every(v => arr2.includes(v)))
+  )
+  .subscribe(console.log)
