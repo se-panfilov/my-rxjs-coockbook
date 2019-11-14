@@ -2,7 +2,7 @@ const {of, Subject} = require('rxjs')
 const {delay, takeUntil} = require('rxjs/operators')
 
 // Case:
-// Wend several http calls in an order, one after another one
+// When several http calls in an order, one after another one
 // But the last one call executes ended first, and a call from the middle - ended last
 
 const cancelRequest = new Subject();
