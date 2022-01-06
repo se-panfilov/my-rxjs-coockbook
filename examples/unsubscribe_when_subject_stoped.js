@@ -17,13 +17,9 @@ const interval = setInterval(() => {
 }, 100);
 
 parent$
-  .pipe(
-    finalize(() => child$.complete())
-  )
+  .pipe(finalize(() => child$.complete()))
   .subscribe((state) => child$.next(state));
 
 child$
-  .pipe(
-    finalize(() => console.log('child finalized'))
-  )
+  .pipe(finalize(() => console.log('child finalized')))
   .subscribe(console.log);
