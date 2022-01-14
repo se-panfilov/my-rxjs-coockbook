@@ -5,7 +5,7 @@ const position$ = new BehaviorSubject({ x: 0, y: 0 });
 
 //Case: should get position updates only when sprite became defined 
 
-combineLatest(sprite$, position$)
+combineLatest([sprite$, position$])
   .pipe(
     filter(([sprite, position]) => !!sprite)
   )
