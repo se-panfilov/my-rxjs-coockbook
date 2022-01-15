@@ -1,11 +1,12 @@
 {
   "name": "my-rxjs-coockbook",
+  "type": "module",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/se-panfilov/my-rxjs-coockbook.git",
   "author": "Sergei Panfilov <se-panfilov@ya.ru> (https://se-panfilov.github.io)",
   "license": "MIT",
   "dependencies": {
-    "rxjs": "6.4.0"
+    "rxjs": "7.5.2"
   }
 }

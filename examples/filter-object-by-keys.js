@@ -1,5 +1,4 @@
-const {of, Subject, forkJoin, zip, merge, combineLatest} = require('rxjs')
-const {delay, takeUntil, flatMap, map, switchMap, every, take, tap, reduce} = require('rxjs/operators')
+import { map, of } from 'rxjs';
 
 // Case 1:
 // Filter object by array of keys to exclude (here open letters are allowed, consonant letters are not)

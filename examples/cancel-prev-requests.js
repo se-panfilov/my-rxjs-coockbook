@@ -1,9 +1,9 @@
-const {of, Subject} = require('rxjs')
-const {delay, takeUntil} = require('rxjs/operators')
 
 // Case:
 // When several http calls in an order, one after another one
 // But the last one call executes ended first, and a call from the middle - ended last
+
+import { delay, of, Subject, takeUntil } from 'rxjs';
 
 const cancelRequest = new Subject();
 

@@ -1,5 +1,4 @@
-const {of, Subject, interval, merge} = require('rxjs')
-const {delay, take, map, takeUntil} = require('rxjs/operators')
+import { interval, map, Subject, take, takeUntil } from 'rxjs';
 
 // Case:
 // QQQQ

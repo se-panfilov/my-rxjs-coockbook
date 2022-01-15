@@ -1,6 +1,4 @@
-const {of, Subject} = require('rxjs')
-const {delay, tap, switchMap, flatMap} = require('rxjs/operators')
-
+import { delay, of, Subject, switchMap, tap } from 'rxjs';
 // Async input, but we wait for the latest value
 
 const userInputSubj = new Subject();

@@ -1,5 +1,4 @@
-const {of, Subject} = require('rxjs')
-const {delay, takeUntil, flatMap, map, switchMap} = require('rxjs/operators')
+import { flatMap, of } from 'rxjs';
 
 // Case:
 // QQQQQQQQQQQQ

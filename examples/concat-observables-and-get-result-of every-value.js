@@ -1,5 +1,4 @@
-const {of, from, Subject, forkJoin, zip, merge} = require('rxjs')
-const {delay, takeUntil, flatMap, map, switchMap, every, take} = require('rxjs/operators')
+import { every, from, map, merge, of } from 'rxjs';
 
 // Case:
 // Get two observables and get final value based on All values

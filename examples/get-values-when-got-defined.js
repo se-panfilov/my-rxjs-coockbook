@@ -1,5 +1,6 @@
-const { BehaviorSubject, combineLatest } = require('rxjs');
-const { filter } = require('rxjs/operators');
+import { BehaviorSubject, combineLatest } from 'rxjs';
+import { filter } from 'rxjs/operators';
+
 const sprite$ = new BehaviorSubject(undefined);
 const position$ = new BehaviorSubject({ x: 0, y: 0 });
 

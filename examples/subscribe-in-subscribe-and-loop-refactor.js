@@ -1,5 +1,4 @@
-const {of, Subject, forkJoin, zip, merge, throwError, combineLatest} = require('rxjs')
-const {delay, takeUntil, flatMap, map, switchMap, every, take, tap, catchError, mergeMap} = require('rxjs/operators')
+import { forkJoin, mergeMap, of } from 'rxjs';
 
 function mainEmitter() {
   return of([{id: 'aaa', url: '/aaa'}, {id: 'bbb', url: '/bbb'}, {id: 'ccc', url: '/ccc'}])

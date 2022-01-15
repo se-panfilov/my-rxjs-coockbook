@@ -1,5 +1,5 @@
-const {of} = require('rxjs');
-const {filter, tap} = require('rxjs/operators')
+import { of } from 'rxjs';
+import { filter } from 'rxjs/operators';
 
 //ignore undefined
 

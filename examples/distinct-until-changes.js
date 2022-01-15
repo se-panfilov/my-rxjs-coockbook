@@ -1,5 +1,4 @@
-const {of, Subject, forkJoin, zip, merge, throwError, from} = require('rxjs')
-const {delay, takeUntil, flatMap, map, switchMap, every, take, tap, catchError, distinctUntilChanged} = require('rxjs/operators')
+import { distinctUntilChanged, from } from 'rxjs';
 
 //simple case
 // const source$ = from([1, 1, 2, 2, 3, 3]);
@@ -10,8 +9,8 @@ const {delay, takeUntil, flatMap, map, switchMap, every, take, tap, catchError, 
 //   .subscribe(console.log);
 //
 // const sampleObject = { name: 'Test' };
-
 // Objects
+
 const source$ = from([
   {a: 1, b: 2},
   {a: 1, b: 2},

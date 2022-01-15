@@ -1,5 +1,4 @@
-const {Subject} = require('rxjs');
-const {last} = require('rxjs/operators');
+import { last, Subject } from 'rxjs';
 
 //Get only very last value
 

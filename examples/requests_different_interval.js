@@ -1,5 +1,5 @@
-const {of, Subject, interval, merge} = require('rxjs')
-const {delay, takeUntil, take, map} = require('rxjs/operators')
+import { interval, map, merge, take } from 'rxjs';
+
 
 // Case:
 // Tho observables that send the values after different period

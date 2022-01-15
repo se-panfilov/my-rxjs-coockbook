@@ -1,5 +1,4 @@
-const {of, forkJoin} = require('rxjs');
-const {map} = require('rxjs/operators');
+import { forkJoin, map, of } from 'rxjs';
 
 const five = of(5)
 const six = of(6)

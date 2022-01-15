@@ -1,5 +1,4 @@
-const { Subject, BehaviorSubject } = require('rxjs');
-const { filter, takeUntil, finalize, take, map } = require('rxjs/operators');
+import { BehaviorSubject, finalize, Subject } from 'rxjs';
 
 // Case: we want to unsubscribe child$ when parent$ is complete
 

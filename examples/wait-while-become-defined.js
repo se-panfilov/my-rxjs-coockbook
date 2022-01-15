@@ -1,15 +1,15 @@
+import { endWith, flatMap, interval, of, takeUntil, takeWhile, timer } from 'rxjs';
+import { filter } from 'rxjs/operators';
+
 const parent = {
   child: undefined
 };
 
-setTimeout(() => parent.child = {some: 'value'}, 1000)
+setTimeout(() => parent.child = { some: 'value' }, 1000);
 
-console.time('asd')
+console.time('asd');
 
 // In RxJs
-const {endWith, takeUntil, takeWhile, filter} = require('rxjs/operators')
-const {flatMap} = require('rxjs/internal/operators')
-const {timer, interval, of} = require('rxjs')
 
 function waitWhileViewChildIsReady(parent, child, maxWaitTime = 3000, refreshRateSec = 100) {
   return interval(refreshRateSec)
@@ -20,12 +20,12 @@ function waitWhileViewChildIsReady(parent, child, maxWaitTime = 3000, refreshRat
       endWith(parent[child]),
       flatMap(v => {
         if (!parent[child]) throw new Error(`Children "${child}" is never ready`);
-        return of(!parent[child])
+        return of(!parent[child]);
       })
-    )
+    );
 }
 
 waitWhileViewChildIsReady(parent, 'child').subscribe(res => {
   console.log(parent.child);
-  if (parent.child) console.timeEnd('asd')
+  if (parent.child) console.timeEnd('asd');
 });
